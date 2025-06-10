@@ -8,6 +8,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 input {
   font-size: 25px;
   margin: 10px;
@@ -135,4 +136,58 @@ img {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+
+  .players {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .points-table {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .player input,
+  .max-points-input {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 18px;
+    min-width: 40%;
+    max-width: 90%;
+    margin: 10px 5px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .board-svg {
+    width: 90vw;
+    height: auto;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .info-icon {
+    font-size: 20px;
+    top: 5px;
+    right: 10px;
+  }
 }
