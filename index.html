@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Darts Calculator</title>
+  </head>
+  <body>
+    <!-- modal -->
+    <div class="info-modal hidden">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>🎯 Dartspiel - Regeln & Hinweise</h2>
+        <h3>Allgemeine Regeln:</h3>
+        <ul>
+          <li>Ein Standard-Dartboard hat 20 nummerierte Segmente von 1 bis 20.</li>
+          <li>Das äußere schmale Ringfeld verdoppelt den Punktwert.</li>
+          <li>Das innere schmale Ringfeld verdreifacht den Punktwert.</li>
+          <li>Das grüne Bullseye (25 Punkte) und das rote Bullseye (50 Punkte) befinden sich in der Mitte.</li>
+        </ul>
+        <h3>Spielvarianten</h3>
+        <h4>1️⃣X01-Spiele (301, 501, 701) - <span style="color: green;">Aktuell</span></h4>
+        <ul>
+          <li>Jeder Spieler startet mit z.B. <strong>501 Punkten</strong>.</li>
+          <li><strong>Ziel</strong>: Genau 0 Punkte erreichen.</li>
+          <li>Varianten:</li>
+          <ul>
+            <li><strong>Single Out</strong>: beliebiger letzter Treffer</li>
+            <li><strong>Double Out</strong>: letzter Wurf muss im Double landen</li>
+            <li><strong>Double In / Double Out</strong>: Spiel beginnt erst mit einem Treffer ins Double</li>
+          </ul>
+          
+        </ul>
+        <h4>2️⃣Around the Clock</h4>
+          <ul>
+            <li>Man muss nacheinander <strong>alle Zahlen von 1 bis 20</strong> treffen.</li>
+            <li><strong>Variante</strong>: auch Bullseye zum Schluss.</li>
+            <li>Wer zuerst alle trifft, gewinnt.</li>
+          </ul>
+          <h5>Beim Wunsch nach andere Varianten bitte hier kontaktieren: hlebbuschek.dd@gmail.com</h5>
+        <h3>Tool-Nutzung:</h3>
+        <ul>
+          <li>Trage Namen und Startpunkte ein (z.B. 301 oder 501).</li>
+          <li>Klicke auf ▶️, um das Spiel zu starten. Eingaben werden dann gesperrt.</li>
+          <li>Klicke auf Dartboard-Felder, um Punkte zu berechnen. Abwechselnd pro Spieler alle 3 Würfe.</li>
+          <li>🔁 startet das Spiel neu.</li>
+        </ul>
+      </div>
+    </div>
+    <main>
+      <div class="info-icon" title="Information">ℹ️</div>
+      <section class="gametable">
+        <div class="board"></div>
+      </section>
+      <section class="players">
+        <div class="player" id="p-1">
+          <input type="text" placeholder="Name1">
+          <div class="points-table">
+            Rest: <input class="max-points-input score-1" type="number" placeholder="num"> 
+            <strong class="max-points"></strong>
+          </div>
+        </div>
+        <div class="player" id="p-2">
+          <input type="text" placeholder="Name2">
+          <div class="points-table">
+            Rest: <input class="max-points-input score-2" type="number" placeholder="num"> 
+            <strong class="max-points"></strong>
+          </div>
+        </div>
+      </section>
+      <section class="buttons">
+        <button class="start-game">
+          <img src="img/play.png">
+        </button>
+        <button class="refresh unvisible">
+          <img src="img/refresh.png">
+        </button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
